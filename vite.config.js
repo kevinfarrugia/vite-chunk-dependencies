@@ -17,6 +17,7 @@ const isBundleMatchFramework = (id) =>
 export default defineConfig({
   plugins: [react()],
   build: {
+    minify: false,
     rollupOptions: {
       output: {
         manualChunks: (id, { getModuleInfo }) => {
