@@ -20,6 +20,7 @@ export default defineConfig({
     minify: false,
     rollupOptions: {
       output: {
+        onlyExplicitManualChunks: true,
         manualChunks: (id, { getModuleInfo }) => {
           // Create a separate chunk for React framework dependencies
           if (isBundleMatchFramework(id)) {
